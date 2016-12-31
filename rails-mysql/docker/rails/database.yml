@@ -1,0 +1,2 @@
+  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
+  host: db
