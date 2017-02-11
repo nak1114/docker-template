@@ -1,0 +1,10 @@
+.git
+.rspec
+.gitignore
+.dockerignore
+docker-*
+log
+tmp
+vendor/assets
+node_modules
+docker
