@@ -6,9 +6,7 @@ services:
       - "3306:3306"
     volumes:
       - ./docker/mysql/volumes:/var/lib/mysql
-    extends:
-      file: ./docker/mysql/password.yml
-      service: password
+    env_file: ./docker/mysql/password.env
   web:
     build:
       context: .
@@ -20,8 +18,6 @@ services:
       - .:/myapp
     environment:
       RAILS_ENV: development
-    extends:
-      file: ./docker/mysql/password.yml
-      service: password
+    env_file: ./docker/mysql/password.env
     depends_on:
       - db
